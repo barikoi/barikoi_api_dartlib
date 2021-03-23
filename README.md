@@ -54,7 +54,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://backend.barikoi.com/v2/api*
+All URIs are relative to *https://barikoi.xyz/v2/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

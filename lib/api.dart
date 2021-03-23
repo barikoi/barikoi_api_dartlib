@@ -15,7 +15,7 @@ class BarikoiApi {
 
     Dio dio;
     Serializers serializers;
-    String basePath = "https://backend.barikoi.com/v2/api";
+    String basePath = "https://barikoi.xyz/v2/api";
 
     BarikoiApi({this.dio, Serializers serializers, String basePathOverride, List<Interceptor> interceptors}) {
         if (dio == null) {

@@ -5,7 +5,7 @@
 import 'package:barikoi_api/api.dart';
 ```
 
-All URIs are relative to *https://backend.barikoi.com/v2/api*
+All URIs are relative to *https://barikoi.xyz/v2/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
