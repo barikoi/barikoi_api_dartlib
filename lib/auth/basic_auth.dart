@@ -14,7 +14,7 @@ class BasicAuthInterceptor extends AuthInterceptor {
     Map<String, BasicAuthInfo> authInfo = {};
 
     @override
-    Future onRequest(RequestOptions options) {
+    void onRequest(RequestOptions options,RequestInterceptorHandler handler,) {
         final metadataAuthInfo = getAuthInfo(options, 'basic');
         for (var info in metadataAuthInfo) {
             final authName = info['name'];
@@ -26,6 +26,6 @@ class BasicAuthInterceptor extends AuthInterceptor {
             }
         }
 
-        return super.onRequest(options);
+        return super.onRequest(options, handler);
     }
 }
