@@ -1,5 +1,5 @@
 name: barikoi_api
-version: 0.0.1
+version: 0.0.2
 description: Barikoi API Client
 environment:
     sdk: ">=2.3.0 <3.0.0"
