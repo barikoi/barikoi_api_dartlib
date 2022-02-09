@@ -6,7 +6,7 @@ class ApiKeyAuthInterceptor extends AuthInterceptor {
     Map<String, String> apiKeys = {};
 
     @override
-    Future onRequest(RequestOptions options) {
+    void onRequest( RequestOptions options,RequestInterceptorHandler handler) {
         final authInfo = getAuthInfo(options, "apiKey");
         for (var info in authInfo) {
             final authName = info["name"];
@@ -22,6 +22,6 @@ class ApiKeyAuthInterceptor extends AuthInterceptor {
                 break;
             }
         }
-        return super.onRequest(options);
+        return super.onRequest(options, handler);
     }
 }

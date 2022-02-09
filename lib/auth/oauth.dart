@@ -6,7 +6,7 @@ class OAuthInterceptor extends AuthInterceptor {
     Map<String, String> tokens = {};
 
     @override
-    Future onRequest(RequestOptions options) {
+    void onRequest(RequestOptions options,RequestInterceptorHandler handler,) {
         final authInfo = getAuthInfo(options, "oauth");
         for (var info in authInfo) {
             final token = tokens[info["name"]];
@@ -15,6 +15,6 @@ class OAuthInterceptor extends AuthInterceptor {
                 break;
             }
         }
-        return super.onRequest(options);
+        return super.onRequest(options,handler);
     }
 }

@@ -55,7 +55,6 @@ class PlaceApi {
             return Response<InlineResponse2001>(
                 data: data,
                 headers: response.headers,
-                request: response.request,
                 redirects: response.redirects,
                 statusCode: response.statusCode,
                 statusMessage: response.statusMessage,
@@ -104,7 +103,6 @@ class PlaceApi {
             return Response<InlineResponse200>(
                 data: data,
                 headers: response.headers,
-                request: response.request,
                 redirects: response.redirects,
                 statusCode: response.statusCode,
                 statusMessage: response.statusMessage,
