@@ -6,13 +6,11 @@ part 'error.g.dart';
 abstract class Error implements Built<Error, ErrorBuilder> {
 
     
-        @nullable
     @BuiltValueField(wireName: r'status')
-    int get status;
+    int? get status;
     
-        @nullable
     @BuiltValueField(wireName: r'message')
-    String get message;
+    String? get message;
 
     // Boilerplate code needed to wire-up generated code
     Error._();

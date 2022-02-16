@@ -17,9 +17,9 @@ class _$InlineResponse2001Serializer
   final String wireName = 'InlineResponse2001';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, InlineResponse2001 object,
+  Iterable<Object?> serialize(Serializers serializers, InlineResponse2001 object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
+    final result = <Object?>[];
     if (object.places != null) {
       result
         ..add('places')
@@ -38,13 +38,13 @@ class _$InlineResponse2001Serializer
 
   @override
   InlineResponse2001 deserialize(
-      Serializers serializers, Iterable<Object> serialized,
+      Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new InlineResponse2001Builder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current as String?;
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
@@ -56,7 +56,7 @@ class _$InlineResponse2001Serializer
           break;
         case 'status':
           result.status = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
       }
     }
@@ -67,12 +67,12 @@ class _$InlineResponse2001Serializer
 
 class _$InlineResponse2001 extends InlineResponse2001 {
   @override
-  final BuiltList<Place> places;
+  final BuiltList<Place>? places;
   @override
-  final int status;
+  final int? status;
 
   factory _$InlineResponse2001(
-          [void Function(InlineResponse2001Builder) updates]) =>
+          [void Function(InlineResponse2001Builder)? updates]) =>
       (new InlineResponse2001Builder()..update(updates)).build();
 
   _$InlineResponse2001._({this.places, this.status}) : super._();
@@ -110,22 +110,22 @@ class _$InlineResponse2001 extends InlineResponse2001 {
 
 class InlineResponse2001Builder
     implements Builder<InlineResponse2001, InlineResponse2001Builder> {
-  _$InlineResponse2001 _$v;
+  _$InlineResponse2001? _$v;
 
-  ListBuilder<Place> _places;
+  ListBuilder<Place>? _places;
   ListBuilder<Place> get places => _$this._places ??= new ListBuilder<Place>();
   set places(ListBuilder<Place> places) => _$this._places = places;
 
-  int _status;
-  int get status => _$this._status;
-  set status(int status) => _$this._status = status;
+  int? _status;
+  int? get status => _$this._status;
+  set status(int? status) => _$this._status = status;
 
   InlineResponse2001Builder();
 
   InlineResponse2001Builder get _$this {
     if (_$v != null) {
-      _places = _$v.places?.toBuilder();
-      _status = _$v.status;
+      _places = _$v!.places?.toBuilder();
+      _status = _$v!.status;
       _$v = null;
     }
     return this;
@@ -140,7 +140,7 @@ class InlineResponse2001Builder
   }
 
   @override
-  void update(void Function(InlineResponse2001Builder) updates) {
+  void update(void Function(InlineResponse2001Builder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -151,7 +151,7 @@ class InlineResponse2001Builder
       _$result = _$v ??
           new _$InlineResponse2001._(places: _places?.build(), status: status);
     } catch (_) {
-      String _$failedField;
+      late String _$failedField;
       try {
         _$failedField = 'places';
         _places?.build();

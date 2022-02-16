@@ -15,9 +15,9 @@ class _$PlaceSerializer implements StructuredSerializer<Place> {
   final String wireName = 'Place';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, Place object,
+  Iterable<Object?> serialize(Serializers serializers, Place object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
+    final result = <Object?>[];
     if (object.id != null) {
       result
         ..add('id')
@@ -76,51 +76,51 @@ class _$PlaceSerializer implements StructuredSerializer<Place> {
   }
 
   @override
-  Place deserialize(Serializers serializers, Iterable<Object> serialized,
+  Place deserialize(Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new PlaceBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current as String?;
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'longitude':
           result.longitude = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'latitude':
           result.latitude = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'address':
           result.address = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'area':
           result.area = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'city':
           result.city = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pType':
           result.pType = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'postCode':
           result.postCode = serializers.deserialize(value,
-              specifiedType: const FullType(num)) as num;
+              specifiedType: const FullType(num)) as num?;
           break;
         case 'uCode':
           result.uCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -131,25 +131,25 @@ class _$PlaceSerializer implements StructuredSerializer<Place> {
 
 class _$Place extends Place {
   @override
-  final int id;
+  final int? id;
   @override
-  final String longitude;
+  final String? longitude;
   @override
-  final String latitude;
+  final String? latitude;
   @override
-  final String address;
+  final String? address;
   @override
-  final String area;
+  final String? area;
   @override
-  final String city;
+  final String? city;
   @override
-  final String pType;
+  final String? pType;
   @override
-  final num postCode;
+  final num? postCode;
   @override
-  final String uCode;
+  final String? uCode;
 
-  factory _$Place([void Function(PlaceBuilder) updates]) =>
+  factory _$Place([void Function(PlaceBuilder)? updates]) =>
       (new PlaceBuilder()..update(updates)).build();
 
   _$Place._(
@@ -221,64 +221,64 @@ class _$Place extends Place {
 }
 
 class PlaceBuilder implements Builder<Place, PlaceBuilder> {
-  _$Place _$v;
+  _$Place? _$v;
 
-  int _id;
-  int get id => _$this._id;
-  set id(int id) => _$this._id = id;
+  int? _id;
+  int? get id => _$this._id;
+  set id(int? id) => _$this._id = id;
 
-  String _longitude;
-  String get longitude => _$this._longitude;
-  set longitude(String longitude) => _$this._longitude = longitude;
+  String? _longitude;
+  String? get longitude => _$this._longitude;
+  set longitude(String? longitude) => _$this._longitude = longitude;
 
-  String _latitude;
-  String get latitude => _$this._latitude;
-  set latitude(String latitude) => _$this._latitude = latitude;
+  String? _latitude;
+  String? get latitude => _$this._latitude;
+  set latitude(String? latitude) => _$this._latitude = latitude;
 
-  String _address;
-  String get address => _$this._address;
-  set address(String address) => _$this._address = address;
+  String? _address;
+  String? get address => _$this._address;
+  set address(String? address) => _$this._address = address;
 
-  String _area;
-  String get area => _$this._area;
-  set area(String area) => _$this._area = area;
+  String? _area;
+  String? get area => _$this._area;
+  set area(String? area) => _$this._area = area;
 
-  String _city;
-  String get city => _$this._city;
-  set city(String city) => _$this._city = city;
+  String? _city;
+  String? get city => _$this._city;
+  set city(String? city) => _$this._city = city;
 
-  String _pType;
-  String get pType => _$this._pType;
-  set pType(String pType) => _$this._pType = pType;
+  String? _pType;
+  String? get pType => _$this._pType;
+  set pType(String? pType) => _$this._pType = pType;
 
-  num _postCode;
-  num get postCode => _$this._postCode;
-  set postCode(num postCode) => _$this._postCode = postCode;
+  num? _postCode;
+  num? get postCode => _$this._postCode;
+  set postCode(num? postCode) => _$this._postCode = postCode;
 
-  String _uCode;
-  String get uCode => _$this._uCode;
-  set uCode(String uCode) => _$this._uCode = uCode;
+  String? _uCode;
+  String? get uCode => _$this._uCode;
+  set uCode(String? uCode) => _$this._uCode = uCode;
 
   PlaceBuilder();
 
   PlaceBuilder get _$this {
     if (_$v != null) {
-      _id = _$v.id;
-      _longitude = _$v.longitude;
-      _latitude = _$v.latitude;
-      _address = _$v.address;
-      _area = _$v.area;
-      _city = _$v.city;
-      _pType = _$v.pType;
-      _postCode = _$v.postCode;
-      _uCode = _$v.uCode;
+      _id = _$v!.id;
+      _longitude = _$v!.longitude;
+      _latitude = _$v!.latitude;
+      _address = _$v!.address;
+      _area = _$v!.area;
+      _city = _$v!.city;
+      _pType = _$v!.pType;
+      _postCode = _$v!.postCode;
+      _uCode = _$v!.uCode;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(Place other) {
+  void replace(Place? other) {
     if (other == null) {
       throw new ArgumentError.notNull('other');
     }
@@ -286,7 +286,7 @@ class PlaceBuilder implements Builder<Place, PlaceBuilder> {
   }
 
   @override
-  void update(void Function(PlaceBuilder) updates) {
+  void update(void Function(PlaceBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

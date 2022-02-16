@@ -2,7 +2,7 @@ name: barikoi_api
 version: 0.0.2
 description: Barikoi API Client
 environment:
-    sdk: ">=2.3.0 <3.0.0"
+    sdk: '>=2.12.0 <3.0.0'
 dependencies:
     dio: ^4.0.4
     built_value: ^8.1.4
