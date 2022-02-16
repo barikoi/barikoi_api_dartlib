@@ -17,9 +17,9 @@ class _$InlineResponse200Serializer
   final String wireName = 'InlineResponse200';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, InlineResponse200 object,
+  Iterable<Object?> serialize(Serializers serializers, InlineResponse200 object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
+    final result = <Object?>[];
     if (object.place != null) {
       result
         ..add('place')
@@ -37,23 +37,23 @@ class _$InlineResponse200Serializer
 
   @override
   InlineResponse200 deserialize(
-      Serializers serializers, Iterable<Object> serialized,
+      Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new InlineResponse200Builder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current as String?;
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
         case 'place':
           result.place.replace(serializers.deserialize(value,
-              specifiedType: const FullType(Place)) as Place);
+              specifiedType: const FullType(Place)) as Place?);
           break;
         case 'status':
           result.status = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
       }
     }
@@ -64,12 +64,12 @@ class _$InlineResponse200Serializer
 
 class _$InlineResponse200 extends InlineResponse200 {
   @override
-  final Place place;
+  final Place? place;
   @override
-  final int status;
+  final int? status;
 
   factory _$InlineResponse200(
-          [void Function(InlineResponse200Builder) updates]) =>
+          [void Function(InlineResponse200Builder)? updates]) =>
       (new InlineResponse200Builder()..update(updates)).build();
 
   _$InlineResponse200._({this.place, this.status}) : super._();
@@ -106,22 +106,22 @@ class _$InlineResponse200 extends InlineResponse200 {
 
 class InlineResponse200Builder
     implements Builder<InlineResponse200, InlineResponse200Builder> {
-  _$InlineResponse200 _$v;
+  _$InlineResponse200? _$v;
 
-  PlaceBuilder _place;
+  PlaceBuilder? _place;
   PlaceBuilder get place => _$this._place ??= new PlaceBuilder();
   set place(PlaceBuilder place) => _$this._place = place;
 
-  int _status;
-  int get status => _$this._status;
-  set status(int status) => _$this._status = status;
+  int? _status;
+  int? get status => _$this._status;
+  set status(int? status) => _$this._status = status;
 
   InlineResponse200Builder();
 
   InlineResponse200Builder get _$this {
     if (_$v != null) {
-      _place = _$v.place?.toBuilder();
-      _status = _$v.status;
+      _place = _$v!.place?.toBuilder();
+      _status = _$v!.status;
       _$v = null;
     }
     return this;
@@ -136,7 +136,7 @@ class InlineResponse200Builder
   }
 
   @override
-  void update(void Function(InlineResponse200Builder) updates) {
+  void update(void Function(InlineResponse200Builder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -147,7 +147,7 @@ class InlineResponse200Builder
       _$result = _$v ??
           new _$InlineResponse200._(place: _place?.build(), status: status);
     } catch (_) {
-      String _$failedField;
+      late String _$failedField;
       try {
         _$failedField = 'place';
         _place?.build();

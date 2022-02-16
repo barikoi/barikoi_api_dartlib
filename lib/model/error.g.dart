@@ -15,9 +15,9 @@ class _$ErrorSerializer implements StructuredSerializer<Error> {
   final String wireName = 'Error';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, Error object,
+  Iterable<Object?> serialize(Serializers serializers, Error object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
+    final result = <Object?>[];
     if (object.status != null) {
       result
         ..add('status')
@@ -34,23 +34,23 @@ class _$ErrorSerializer implements StructuredSerializer<Error> {
   }
 
   @override
-  Error deserialize(Serializers serializers, Iterable<Object> serialized,
+  Error deserialize(Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new ErrorBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current as String?;
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
         case 'status':
           result.status = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'message':
           result.message = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -61,11 +61,11 @@ class _$ErrorSerializer implements StructuredSerializer<Error> {
 
 class _$Error extends Error {
   @override
-  final int status;
+  final int? status;
   @override
-  final String message;
+  final String? message;
 
-  factory _$Error([void Function(ErrorBuilder) updates]) =>
+  factory _$Error([void Function(ErrorBuilder)? updates]) =>
       (new ErrorBuilder()..update(updates)).build();
 
   _$Error._({this.status, this.message}) : super._();
@@ -98,22 +98,22 @@ class _$Error extends Error {
 }
 
 class ErrorBuilder implements Builder<Error, ErrorBuilder> {
-  _$Error _$v;
+  _$Error? _$v;
 
-  int _status;
-  int get status => _$this._status;
-  set status(int status) => _$this._status = status;
+  int? _status;
+  int? get status => _$this._status;
+  set status(int? status) => _$this._status = status;
 
-  String _message;
-  String get message => _$this._message;
-  set message(String message) => _$this._message = message;
+  String? _message;
+  String? get message => _$this._message;
+  set message(String? message) => _$this._message = message;
 
   ErrorBuilder();
 
   ErrorBuilder get _$this {
     if (_$v != null) {
-      _status = _$v.status;
-      _message = _$v.message;
+      _status = _$v!.status;
+      _message = _$v!.message;
       _$v = null;
     }
     return this;
@@ -128,7 +128,7 @@ class ErrorBuilder implements Builder<Error, ErrorBuilder> {
   }
 
   @override
-  void update(void Function(ErrorBuilder) updates) {
+  void update(void Function(ErrorBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

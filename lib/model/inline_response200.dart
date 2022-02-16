@@ -7,13 +7,11 @@ part 'inline_response200.g.dart';
 abstract class InlineResponse200 implements Built<InlineResponse200, InlineResponse200Builder> {
 
     
-        @nullable
     @BuiltValueField(wireName: r'place')
-    Place get place;
+    Place? get place;
     
-        @nullable
     @BuiltValueField(wireName: r'status')
-    int get status;
+    int? get status;
 
     // Boilerplate code needed to wire-up generated code
     InlineResponse200._();
