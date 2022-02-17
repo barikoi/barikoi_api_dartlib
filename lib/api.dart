@@ -37,15 +37,15 @@ class BarikoiApi {
     }
 
     void setOAuthToken(String name, String token) {
-        (this.dio!.interceptors.firstWhere((element) => element is OAuthInterceptor, orElse: null) as OAuthInterceptor)?.tokens[name] = token;
+        (this.dio!.interceptors.firstWhere((element) => element is OAuthInterceptor, orElse: null) as OAuthInterceptor).tokens[name] = token;
     }
 
     void setBasicAuth(String name, String username, String password) {
-        (this.dio!.interceptors.firstWhere((element) => element is BasicAuthInterceptor, orElse: null) as BasicAuthInterceptor)?.authInfo[name] = BasicAuthInfo(username, password);
+        (this.dio!.interceptors.firstWhere((element) => element is BasicAuthInterceptor, orElse: null) as BasicAuthInterceptor).authInfo[name] = BasicAuthInfo(username, password);
     }
 
     void setApiKey(String name, String apiKey) {
-        (this.dio!.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor, orElse: null) as ApiKeyAuthInterceptor)?.apiKeys[name] = apiKey;
+        (this.dio!.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor, orElse: null) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
     }
 
 
