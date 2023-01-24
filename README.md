@@ -1,7 +1,6 @@
 # barikoi_api
 
 - API version: 1.0.3
-- Build package: org.openapitools.codegen.languages.DartDioClientCodegen
 
 ## Requirements
 
