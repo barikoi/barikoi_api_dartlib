@@ -19,11 +19,13 @@ dependencies:
 ### Github
 If this Dart package is published to Github, please include the following in pubspec.yaml
 ```yaml
+name: barikoi_api
+version: 0.0.3
+description: Barikoi API Client
 dependencies:
   barikoi_api:
-    git:
-      url: https://github.com/barikoi/barikoi_api_dartlib.git
-      #ref: main
+    git: https://github.com/barikoi/barikoi_api_dartlib.git
+      version: 'any'
 ```
 
 ### Local development
