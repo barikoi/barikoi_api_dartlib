@@ -32,7 +32,7 @@ final String q = q_example; // String | Search query input parameter
 try {
     final response = api.getautocompleteplacelist(q);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling PlaceApi->getautocompleteplacelist: $e\n');
 }
 ```
@@ -86,7 +86,7 @@ final bool pauroshova = false; // bool | flag to get pauroshova of the location
 try {
     final response = api.getrevgeoplace(latitude, longitude, area, address, country, division, district, subDistrict, union, pauroshova);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling PlaceApi->getrevgeoplace: $e\n');
 }
 ```

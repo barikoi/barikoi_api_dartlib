@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 analysis_options.yaml
 doc/AddressComponents.md
@@ -28,10 +27,3 @@ lib/src/model/getrevgeoplace200_response.dart
 lib/src/model/place.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/address_components_test.dart
-test/area_components_test.dart
-test/error_test.dart
-test/getautocompleteplacelist200_response_test.dart
-test/getrevgeoplace200_response_test.dart
-test/place_api_test.dart
-test/place_test.dart
